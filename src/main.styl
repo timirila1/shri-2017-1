@@ -1,0 +1,138 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic');
+
+// Reset styles
+@import "reset.styl"
+
+// Variables
+$main-font = 'PT Sans', sans-serif;
+$narrow-font = 'Open Sans Condensed', sans-serif;
+$link-color = #04b;
+$border = 1px solid #333333;
+$border-light = 1px solid #d8d8d8;
+
+*
+  box-sizing: border-box;
+
+body
+  font-family: $main-font;
+
+a
+  text-decoration: none;
+  color: #669;
+  transition: color .2s ease
+  &:hover,
+  &:active
+    color: #ff4a46;
+
+
+.head
+  background-color: #000;
+
+  &__logo
+    display: inline-block;
+    padding: 20px 20px;
+    border-right: $border;
+    color: #fff;
+    text-decoration: none;
+
+  &__logo-text
+    font-size: 24px;
+    font-family: $narrow-font;
+
+.page-title
+  margin: 5% 0;
+  padding: 0 20px;
+  font-family: $main-font;
+  font-weight: 300;
+  font-size: 44px;
+
+
+.schedule
+
+  &__head
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(234, 234, 234, 0.5);
+    border-bottom: $border-light;
+
+    @media screen and (max-width: 767px)
+      display: none;
+
+  &__head-cell
+    flex-flow: row;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 20px;
+    font-family: $main-font;
+
+    &--narrow
+      flex: 0 0 80px;
+
+
+  &__content-row
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px)
+      display: block;
+      margin-bottom: 30px;
+
+  &__content-cell
+    padding: 10px 0 20px;
+    flex-grow: 1;
+    flex-basis: 0;
+    border-left: $border-light;
+
+    @media screen and (max-width: 767px)
+      padding: 0;
+      border-left: none;
+
+    &--narrow
+      flex: 0 0 80px;
+
+
+
+  .event
+    padding: 15px 20px;
+    border-left: 4px solid transparent;
+
+    &--colored-1
+      border-left-color: #ff4a46;
+    &--colored-2
+      border-left-color: #77c91a;
+    &--colored-3
+      border-left-color: #fdcf09;
+
+    &--light
+      @media screen and (max-width: 767px)
+        border-bottom: $border-light;
+
+    &__date
+      color: #8d8d8d;
+      font-family: $narrow-font;
+      @media screen and (max-width: 767px)
+        color: #000;
+        font-size: 20px;
+
+    &__time
+      margin-bottom: 5px;
+      font-family: $narrow-font;
+
+
+    &__title
+      font-weight: 700;
+      font-size: 17px;
+
+    &__place
+      color: #8d8d8d;
+
+    &__place-additional
+      display: none;
+      @media screen and (max-width: 767px)
+        display: inline;
+
+    &__author
+      margin-bottom: 15px;
